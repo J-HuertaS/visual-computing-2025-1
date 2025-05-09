@@ -184,6 +184,7 @@ public void GenerarObjetos()
 "Crea un botón y dos sliders que permitan aplicar cambio de color, escala y rotación a una box en Three js"
 "Crea una función que genere diferentes figuras a partir de unas coordenadas dadas usando CreatePrimitive de Unity"
 "Exporta distintos objetos creados con vedo en formato stl"
+```
 ---
 
 ## 💬 Reflexión Final
