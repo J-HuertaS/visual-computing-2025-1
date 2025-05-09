@@ -1,4 +1,4 @@
-# 🧪 Nombre del Taller
+# 🧪 Taller - Análisis de Figuras Geométricas: Centroide, Área y Perímetro
 
 ## 📅 Fecha
 `2025-04-28` – Fecha de realización

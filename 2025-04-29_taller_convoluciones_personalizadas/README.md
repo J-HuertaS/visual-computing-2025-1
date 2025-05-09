@@ -47,6 +47,8 @@ Herramientas: `opencv-python`, `numpy`, `matplotlib`, `imageio`, `ipywidget`.
 
 ```text
 2025-04-29_taller_convoluciones_personalizadas/
+├── datos/
+│   └── mariposa.jpg
 ├── python/
 │ └── convoluciones_personalizadas.ipynb
 ├── resultados/
