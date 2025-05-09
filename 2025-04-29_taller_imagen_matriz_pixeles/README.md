@@ -64,6 +64,8 @@ Tools: `opencv-python`, `numpy`, `matplotlib`
 
 ```
 2025-05-03_taller_imagen_matriz_pixeles/
+├── datos/
+│   └── image.jpg
 ├── python/
 │   └── imagen_matriz_pixeles.ipynb
 │   └── image.png
