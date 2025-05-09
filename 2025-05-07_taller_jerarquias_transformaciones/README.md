@@ -273,11 +273,11 @@ function App() {
 
 #### Análisis de imagen
 
-![Gif three.js](three.gif)
+![Gif three.js](Resultados\three.gif)
 
 #### Análisis de video
 
-![Gif Unity](unity.gif)
+![Gif Unity](Resultados\unity.gif)
 
 ---
 
