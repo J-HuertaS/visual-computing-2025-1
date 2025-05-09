@@ -273,7 +273,7 @@ function App() {
 
 #### Análisis de imagen
 
-![Gif three.js](Resultados/three.gif)
+![Gif three.js](Resultados/threejs.gif)
 
 #### Análisis de video
 
