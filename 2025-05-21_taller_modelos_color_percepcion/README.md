@@ -1,7 +1,7 @@
-# 🧪 Taller - Odisea del Espacio de Color: Transformaciones y Percepción Visual
+# 🧪  Taller - Explorando el Color: Percepción Humana y Modelos Computacionales
 
 📅 **Fecha**  
-`2025-05-18`
+`2025-05-21`
 
 ## 🎯 **Objetivo del Taller**
 
