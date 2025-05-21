@@ -37,10 +37,10 @@ Se utilizaron las siguientes herramientas y entornos:
 │       ├── alteraciones_visuales.gif  # GIF de simulaciones de alteraciones
 │       ├── slider_transformaciones.gif # GIF de controles interactivos
 │       ├── canales_hsv.png # Imagen de los canales HSV
-│       ├── canales_lab.png # Imagen de los canales LAB
+│       ├── canales_lab.png # Imagen de los canales CIE lab
 ├── README.md                        
 ```
-canales_hsv
+
 ## 🧪 Implementación
 
 El taller se divide en las siguientes etapas, implementadas en un cuaderno de Google Colab:
@@ -56,7 +56,7 @@ El taller se divide en las siguientes etapas, implementadas en un cuaderno de Go
 
 3.**Simulaciones de Alteraciones Visuales:**
 
-- Simular protanopía y deuteranopía usando transformaciones en el espacio LMS con matrices específicas.
+- Simular *protanopía* y *deuteranopía* usando transformaciones en el espacio LMS con matrices específicas.
 - Simular condiciones de baja luz reduciendo el brillo.
 - Visualizar los efectos para destacar diferencias perceptuales.
 
@@ -67,40 +67,76 @@ El taller se divide en las siguientes etapas, implementadas en un cuaderno de Go
 
 5.**Controles Interactivos (Bonus):**
 
-- Implementar sliders con ipywidgets para ajustar dinámicamente parámetros como brillo (para baja luz) e intensidad de calidez (para filtro cálido).
+- Implementar sliders con ipywidgets para ajustar dinámicamente parámetros como brillo  e intensidad de calidez.
 - Permitir alternar entre espacios de color y transformaciones (RGB, HSV, CIE Lab, protanopía, etc.) mediante un menú desplegable.
 
 6.**Almacenamiento de Resultados:**
 
-- Generar GIFs animados (canales_espacio_color.gif, alteraciones_visuales.gif, slider_transformaciones.gif) para documentar visualizaciones de canales, simulaciones de alteraciones y efectos de los sliders.
+- Generar GIFs animados para documentar visualizaciones de canales, simulaciones de alteraciones y efectos de los sliders.
 
 ### 🔹 **Código Relevante**
 
 Fragmentos clave del taller:
 
-- **Conversión de Espacios de Color y Visualización**
+- **Simulaciones de alteraciones visuales**
 ``` Python
-import cv2
-import numpy as np
-import matplotlib.pyplot as plt
-from skimage import color
+def rgb_a_lms(img_rgb):
+    """Convierte de RGB a LMS manualmente usando una matriz estándar."""
+    matriz_rgb_a_lms = np.array([
+        [0.4002, 0.7076, -0.0808],
+        [-0.2263, 1.1653, 0.0457],
+        [0.0, 0.0, 0.9182]
+    ])
+    img = img_rgb / 255.0
+    alto, ancho, _ = img.shape
+    img_flat = img.reshape(-1, 3)
+    lms = np.dot(img_flat, matriz_rgb_a_lms.T)
+    return lms.reshape(alto, ancho, 3)
 
-# Cargar imagen
-img = cv2.imread('imagen_ejemplo.jpg')
-img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+def lms_a_rgb(lms):
+    """Convierte de LMS a RGB manualmente usando la matriz inversa."""
+    matriz_lms_a_rgb = np.array([
+        [1.8601, -1.1295, 0.2199],
+        [0.3612, 0.6388, -0.0000],
+        [0.0000, 0.0000, 1.0891]
+    ])
+    alto, ancho, _ = lms.shape
+    lms_flat = lms.reshape(-1, 3)
+    rgb = np.dot(lms_flat, matriz_lms_a_rgb.T)
+    rgb = np.clip(rgb, 0, 1) * 255
+    return rgb.reshape(alto, ancho, 3).astype(np.uint8)
 
-# Convertir a HSV y CIE Lab
-img_hsv = cv2.cvtColor(img_rgb, cv2.COLOR_RGB2HSV)
-img_lab = color.rgb2lab(img_rgb)
+def simular_protanopia(img_rgb):
+    """Simula protanopía (daltonismo) usando el espacio LMS."""
+    lms = rgb_a_lms(img_rgb)
+    matriz_protanopia = np.array([
+        [0, 2.02344, -2.52581],
+        [0, 1, 0],
+        [0, 0, 1]
+    ])
+    alto, ancho, _ = lms.shape
+    lms_flat = lms.reshape(-1, 3)
+    lms_protanopia = np.dot(lms_flat, matriz_protanopia.T)
+    lms_protanopia = lms_protanopia.reshape(alto, ancho, 3)
+    return lms_a_rgb(lms_protanopia)
 
-# Visualizar canales HSV
-plt.figure(figsize=(15, 5))
-for i, canal in enumerate(['Matiz', 'Saturación', 'Valor']):
-    plt.subplot(1, 3, i+1)
-    plt.imshow(img_hsv[:, :, i], cmap='gray')
-    plt.title(f'HSV - {canal}')
-    plt.axis('off')
-plt.show()
+def simular_deuteranopia(img_rgb):
+    """Simula deuteranopía (daltonismo) usando el espacio LMS."""
+    lms = rgb_a_lms(img_rgb)
+    matriz_deuteranopia = np.array([
+        [1, 0, 0],
+        [0.494207, 0, 1.24827],
+        [0, 0, 1]
+    ])
+    alto, ancho, _ = lms.shape
+    lms_flat = lms.reshape(-1, 3)
+    lms_deuteranopia = np.dot(lms_flat, matriz_deuteranopia.T)
+    lms_deuteranopia = lms_deuteranopia.reshape(alto, ancho, 3)
+    return lms_a_rgb(lms_deuteranopia)
+
+def simular_baja_luz(img_rgb, brillo=0.5):
+    """Simula condiciones de baja luz reduciendo el brillo."""
+    return np.clip(img_rgb * brillo, 0, 255).astype(np.uint8)
 ```
 
 - **Controles Interactivos**
@@ -176,9 +212,9 @@ Prompts que guiaron el desarrollo:
 
 ## 💬 **Reflexión Final**
 
-Este taller me permitió profundizar en los espacios de color y su influencia en la percepción visual. La conversión de imágenes entre RGB, HSV y CIE Lab me ayudó a comprender cómo cada espacio resalta diferentes aspectos del color, como el matiz en HSV o la uniformidad perceptual en CIE Lab. Simular alteraciones visuales como protanopía y deuteranopía fue revelador, ya que mostró cómo las deficiencias de color afectan la percepción, lo que podría aplicarse en diseños accesibles. Los controles interactivos fueron la parte más atractiva, ya que permitieron experimentar con transformaciones en tiempo real, haciendo los efectos visuales más comprensibles.
+Este taller nos permitió profundizar en los espacios de color y su influencia en la percepción visual. La conversión de imágenes entre RGB, HSV y CIE Lab me ayudó a comprender cómo cada espacio resalta diferentes aspectos del color, como el matiz en HSV o la uniformidad perceptual en CIE Lab. Simular alteraciones visuales como protanopía y deuteranopía fue revelador, ya que mostró cómo las deficiencias de color afectan la percepción, lo que podría aplicarse en diseños accesibles. Los controles interactivos fueron la parte más atractiva, ya que permitieron experimentar con transformaciones en tiempo real, haciendo los efectos visuales más comprensibles.
 
-El mayor desafío fue implementar las simulaciones de daltonismo, debido a la necesidad de trabajar en el espacio LMS y usar matrices de transformación precisas. Esto se resolvió usando funciones de scikit-image para conversiones robustas. En futuros proyectos, me gustaría explorar el procesamiento de video en tiempo real con estas técnicas o integrarlas con shaders para un rendimiento optimizado. El taller podría mejorarse añadiendo simulaciones adicionales (como tritanopía) o usando modelos de aprendizaje automático para predecir efectos de percepción de color.
+El mayor desafío fue implementar las simulaciones de daltonismo, debido a la necesidad de trabajar en el espacio LMS y usar matrices de transformación precisas. Esto se resolvió usando funciones de scikit-image para conversiones robustas.Fue muy interesante desarrollar este apartado porque nos permitió asemejar como es la  visualización de las personas con estas condiciones.  En futuros proyectos, se podría explorar el procesamiento de video en tiempo real con estas técnicas o integrarlas con shaders para un rendimiento optimizado. El taller podría mejorarse añadiendo simulaciones adicionales (como tritanopía) o usando modelos de aprendizaje automático para predecir efectos de percepción de color.
 
 
 ## ✅  Checklist de Entrega
