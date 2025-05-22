@@ -186,18 +186,19 @@ interact(aplicar_transformacion,
 
 **Imagen Original** <br>
 
-<img src="https://github.com/user-attachments/assets/9a78a02b-8124-49a8-8f6b-06cd53d4a856" width="350"/> <br>
+<img src="https://github.com/user-attachments/assets/9a78a02b-8124-49a8-8f6b-06cd53d4a856" width="450"/> <br>
 
 📌 El taller incluye GIFs animados para documentar los resultados:
 
-Canales de Espacios de Color
-![deteccion](./resultados/canales_espacio_color.gif )
+<h3>Canales de Espacios de Color</h3>
+<img src="./resultados/canales_espacio_color.gif" alt="deteccion" width="450">
 
-Alteraciones Visuales
-![deteccion](./resultados/alteraciones_visuales.gif)
+<h3>Alteraciones Visuales</h3>
+<img src="./resultados/alteraciones_visuales.gif" alt="deteccion" width="450">
 
-Controles Interactivos
-![deteccion](./resultados/slider_transformaciones.gif)
+<h3>Controles Interactivos</h3>
+<img src="./resultados/slider_transformaciones.gif" alt="deteccion" width="450">
+
 
 ---
 ## 🧩 **Prompts Utilizados**
