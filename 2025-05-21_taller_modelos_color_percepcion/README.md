@@ -43,7 +43,7 @@ Se utilizaron las siguientes herramientas y entornos:
 
 ## 🧪 Implementación
 
-El taller se divide en las siguientes etapas, implementadas en un cuaderno de Google Colab:
+El taller se divide en las siguientes etapas:
 
 ### 🔹 **Etapas Realizadas**
 
@@ -184,8 +184,9 @@ interact(aplicar_transformacion,
 
 ## 📊 **Resultados Visuales**
 
-**Imagen Original**
-<img src="(https://github.com/user-attachments/assets/cc94593c-5684-449c-ba41-ebfaf4bbb447" width="350"/> <br>
+**Imagen Original** <br>
+
+<img src="https://github.com/user-attachments/assets/9a78a02b-8124-49a8-8f6b-06cd53d4a856" width="350"/> <br>
 
 📌 El taller incluye GIFs animados para documentar los resultados:
 
