@@ -109,6 +109,15 @@ def hand_closed(hand):
 
 #### Interacción con gestos
 
+![Interacción con gestos](resultados/gestures_mediapipe_result.gif)
+
+Los **gestos implementados** fueron dos, en ambos casos, se consideraba la posición de todos los dedos menos el pulgar:
+
+  - Palma abierta: Los cuatro dedos completamente extendidos.
+  - Rock: Índice y meñique totalmente extendidos, los demás, contraídos.
+
+#### Pong mediante gestos de mano
+
 ![Pong mediante gestos de mano](resultados/mediapipe_pong_controller.gif)
 
 Los **gestos implementados** fueron dos, en ambos casos, se consideraba la posición de todos los dedos menos el pulgar:

@@ -1,0 +1,41 @@
+# Archivos y carpetas generados por Colab
+.ipynb_checkpoints/
+
+# Archivos temporales o resultados intermedios
+*.csv
+*.tsv
+*.log
+*.out
+*.tmp
+*.npy
+*.npz
+*.pkl
+*.h5
+*.ckpt
+*.pt
+*.onnx
+
+# Directorios comunes de salida
+__pycache__/
+*.py[cod]
+*.so
+
+# Carpetas de datos grandes o montajes
+/content/*
+!*.ipynb  # permite que los notebooks raíz se mantengan
+
+# Archivos del entorno
+.env
+.venv/
+env/
+venv/
+*.egg-info/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Archivos de configuración de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de Jupyter que pueden ser pesados
+*.nbconvert.ipynb
