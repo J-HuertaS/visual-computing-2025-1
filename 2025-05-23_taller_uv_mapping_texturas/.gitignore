@@ -1,0 +1,13 @@
+#Unity
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+MemoryCaptures/
+.vscode/
+*.csproj
+*.unityproj
+*.sln
+*.user
