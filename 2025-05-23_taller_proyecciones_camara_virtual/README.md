@@ -133,11 +133,11 @@ const ProjectionDemo = () => {
 ### 📊 Resultados Visuales
 📌 Este taller requiere explícitamente un GIF animado:
 
-- **Proyecciones de las Flores - Vista perspectiva**
+- **Proyecciones de las Flores - Vista Perspectiva**
   
 <img src="./resultados/perspective_view.gif" alt="deteccion" width="650">
 
-- **Proyecciones de las Flores - Vista ortográfica**
+- **Proyecciones de las Flores - Vista Ortográfica**
   
 <img src="./resultados/orthographic_view.gif" alt="deteccion" width="650">
 
