@@ -32,12 +32,12 @@ Se utilizaron las siguientes herramientas y entornos:
 ├── python/
 │   ├── taller_modelos_color_percepcion.ipynb  
 │   ├── imagen_ejemplo.jpg        
-│   ├── resultados/
-│       ├── canales_espacio_color.gif  # GIF de canales de espacios de color
-│       ├── alteraciones_visuales.gif  # GIF de simulaciones de alteraciones
-│       ├── slider_transformaciones.gif # GIF de controles interactivos
-│       ├── canales_hsv.png # Imagen de los canales HSV
-│       ├── canales_lab.png # Imagen de los canales CIE lab
+├── resultados/
+│   ├── canales_espacio_color.gif  # GIF de canales de espacios de color
+│   ├── alteraciones_visuales.gif  # GIF de simulaciones de alteraciones
+│   ├── slider_transformaciones.gif # GIF de controles interactivos
+│   ├── canales_hsv.png # Imagen de los canales HSV
+│   ├── canales_lab.png # Imagen de los canales CIE lab
 ├── README.md                        
 ```
 
