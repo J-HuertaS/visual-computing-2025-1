@@ -1,4 +1,4 @@
-# 🧪 ** Taller : Modelado Procedural Básico: Geometría desde Código**
+# 🧪 **Taller Modelado Procedural Básico: Geometría desde Código**
 
 ## 📅 Fecha
 `2025-05-23`
@@ -198,18 +198,16 @@ La escena muestra una cuadrícula de cajas amarillas (izquierda), un espiral de 
 
 📌 El taller incluye GIFs animados para documentar los resultados:
 
-### **Estructuras Estáticas**
+### **Estructuras de la escena**
 Muestra la disposición de la cuadrícula, el espiral y el árbol en la escena.
 
-<img src="https://github.com/user-attachments/assets/9a78a02b-8124-49a8-8f6b-06cd53d4a856" width="450"/> <br>
-![Estructuras Estáticas](./resultados/structures.gif)
+<img src="./resultados/structures.gif" alt="deteccion" width="350">
 
 ### Animaciones Dinámicas
-Muestra la rotación de la cuadrícula y la oscilación de los vértices del espiral.
+Muestra la rotación de la cuadrícula y la oscilación de los vértices del espiral al crearse.
 
-![Animaciones Dinámicas](./resultados/animations.gif)
-
-🧭 Los GIFs fueron creados con ScreenToGif siguiendo la guía para crear GIFs.
+<img src="./resultados/animation_sphere.gif" alt="deteccion" width="350">
+<img src="./resultados/animation_grill.gif" alt="deteccion" width="350">
 
 ## 🧩 Prompts Usados
 
