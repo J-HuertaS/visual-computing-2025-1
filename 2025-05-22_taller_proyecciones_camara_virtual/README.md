@@ -130,14 +130,14 @@ const ProjectionDemo = () => {
 
 - **Proyecciones de las Flores - vista perspectiva**
   
-<img src="./resultados/perspective_view.gif" alt="deteccion" width="350">
+<img src="./resultados/perspective_view.gif" alt="deteccion" width="550">
 
-- **Proyecciones de las Flores - vista ortográfica.gif**
+- **Proyecciones de las Flores - vista ortográfica**
   
-<img src="./resultados/orthographic_view.gif" alt="deteccion" width="350">
+<img src="./resultados/orthographic_view.gif" alt="deteccion" width="550">
 
 - **Movimiento de la cámara con `OrbitControls`**.
-<img src="./resultados/Interactive.gif" alt="deteccion" width="350">
+<img src="./resultados/Interactive.gif" alt="deteccion" width="550">
 
 ### 🧩 Prompts Usados
 - "Show how to transform a 3D point to 2D coordinates using Vector3.project(camera) in React Three Fiber."
