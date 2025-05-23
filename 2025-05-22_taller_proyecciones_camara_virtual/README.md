@@ -30,8 +30,13 @@ El objetivo de este taller es explorar cómo una cámara virtual genera una esce
 │     ├── index.html
 │   ├── src/                   
 │     ├── App.tsx           # Configuración de la escena
+│     ├── App.css
+│     ├── App.test.tsx                      
 │     ├── index.tsx
 │     ├── index.css
+│     ├── react-app-env.d.ts
+│     ├── reportWebVitals.ts
+│     ├── setupTests.ts
 ├── resultados/            
 │     ├── Perspective_view.gif    
 │     ├── Orthographic_view.gif
@@ -128,16 +133,16 @@ const ProjectionDemo = () => {
 ### 📊 Resultados Visuales
 📌 Este taller requiere explícitamente un GIF animado:
 
-- **Proyecciones de las Flores - vista perspectiva**
+- **Proyecciones de las Flores - Vista perspectiva**
   
-<img src="./resultados/perspective_view.gif" alt="deteccion" width="550">
+<img src="./resultados/perspective_view.gif" alt="deteccion" width="650">
 
-- **Proyecciones de las Flores - vista ortográfica**
+- **Proyecciones de las Flores - Vista ortográfica**
   
-<img src="./resultados/orthographic_view.gif" alt="deteccion" width="550">
+<img src="./resultados/orthographic_view.gif" alt="deteccion" width="650">
 
 - **Movimiento de la cámara con `OrbitControls`**.
-<img src="./resultados/Interactive.gif" alt="deteccion" width="550">
+<img src="./resultados/Interactive.gif" alt="deteccion" width="650">
 
 ### 🧩 Prompts Usados
 - "Show how to transform a 3D point to 2D coordinates using Vector3.project(camera) in React Three Fiber."
