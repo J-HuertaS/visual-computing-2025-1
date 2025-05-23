@@ -28,8 +28,6 @@ El objetivo de este taller es explorar cómo una cámara virtual genera una esce
 ├── threejs/ 
 │   ├── public/                
 │     ├── index.html
-│     ├── logo192.png
-│     ├── manifest.json
 │   ├── src/                   
 │     ├── App.tsx           # Configuración de la escena
 │     ├── index.tsx
@@ -132,18 +130,29 @@ const ProjectionDemo = () => {
 
 - **Proyecciones de las Flores - vista perspectiva**
   
-  ![proyecciones_flores_vista_perspectiva_.gif](./resultados/proyecciones_flores_perspectiva_ortografica.gif)
+<img src="./resultados/perspective_view.gif" alt="deteccion" width="350">
 
 - **Proyecciones de las Flores - vista ortográfica.gif**
   
-  ![proyecciones_flores_perspectiva_ortografica.gif](./resultados/proyecciones_flores_perspectiva_ortografica.gif)
+<img src="./resultados/orthographic_view.gif" alt="deteccion" width="350">
 
 - **Movimiento de la cámara con `OrbitControls`**.
-  ![manipulacion_flores_orbitcontrols.gif](./resultados/manipulacion_flores_orbitcontrols.gif)
+<img src="./resultados/Interactive.gif" alt="deteccion" width="350">
 
 ### 🧩 Prompts Usados
 - "Show how to transform a 3D point to 2D coordinates using Vector3.project(camera) in React Three Fiber."
 
 
 ### 💬 Reflexión Final
-Este taller me permitió profundizar en el uso de cámaras virtuales y proyecciones 3D, conceptos fundamentales para gráficos por computadora. Aprendí cómo las proyecciones perspectiva y ortográfica afectan la percepción de profundidad: la perspectiva es más realista para escenas naturales, mientras que la ortográfica es ideal para vistas técnicas sin distorsión. También reforcé mi
+Este taller nos permitió profundizar en el uso de cámaras virtuales y proyecciones 3D, conceptos fundamentales para gráficos por computadora. Se puso en práctica cómo las vistas de perspectiva y ortográfica afectan la percepción de profundidad: la perspectiva es más realista para escenas naturales, mientras que la ortográfica es ideal para vistas técnicas sin distorsión. También mediante la práctica se refuerzan los conceptos de transformaciones geométricas al posicionar las flores y usar OrbitControls para interactuar con la escena. La transformación de coordenadas 3D a 2D fue un aspecto interesante, ya que me ayudó a visualizar cómo los puntos se mapean en la pantalla.
+
+La parte más compleja fue manejar los errores de dependencias hasta que se identificaron, además el ajuste del `Canvas` ocupara toda la pantalla, lo que requirió ajustes en los estilos CSS. También se puede destacar la interactividad, lo que es interesante al experimentar con OrbitControls para explorar la escena desde diferentes ángulos. Para futuros proyectos se pueden hacer escenas más complejas y detalladas.
+
+## ✅ Checklist de Entrega
+
+- [x] Carpeta `2025-05-22_taller_proyecciones_camara_virtual`
+- [x] Código limpio y funcional
+- [x] GIFs incluidos con nombres descriptivos (`perspective_view.gif`, `orthographic_view.gif`, `Interactive.gif`)
+- [x] Visualizaciones exportadas a `resultados/`
+- [x] README completo y claro
+- [x] Commits descriptivos en inglés
