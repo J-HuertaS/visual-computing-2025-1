@@ -158,7 +158,7 @@ Se podría mejorar la sensibilidad del pulgar, ya que en algunos casos podía ll
 
 - [x] Carpeta `2025-05-22_taller_gestos_webcam_mediapipe`
 - [x] Código limpio y funcional (`gestos_webcam_mediapipe.ipynb`)
-- [x] GIF incluido con nombre descriptivo (`resultados.gif`)
+- [x] GIF incluido con nombre descriptivo
 - [x] Visualizaciones y métricas exportadas
 - [x] README completo y claro
 - [x] Commits descriptivos en inglés
