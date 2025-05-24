@@ -144,37 +144,10 @@ public void GenerarObjetos()
 ```
 
 ## 📊 Resultados Visuales
-```markdown
+
 ![deteccion](./resultados/python/transformacion_escala_cambiodecolor.gif)
 ![deteccion](./resultados/threejs/transformacion_escala_rotacion_cambiodecolor.gif)
 ![deteccion](./resultados/unity/transformacion_escala_rotacionenx_exportacion.gif)
-![deteccion](./resultados/python/exported/shape_0.stl)
-![deteccion](./resultados/python/exported/shape_1.stl)
-![deteccion](./resultados/python/exported/shape_2.stl)
-![deteccion](./resultados/python/exported/shape_3.stl)
-![deteccion](./resultados/python/exported/shape_4.stl)
-![deteccion](./resultados/python/frames/frame_000.png)
-![deteccion](./resultados/python/frames/frame_001.png)
-![deteccion](./resultados/python/frames/frame_002.png)
-![deteccion](./resultados/python/frames/frame_003.png)
-![deteccion](./resultados/python/frames/frame_004.png)
-![deteccion](./resultados/python/frames/frame_005.png)
-![deteccion](./resultados/python/frames/frame_006.png)
-![deteccion](./resultados/python/frames/frame_007.png)
-![deteccion](./resultados/python/frames/frame_008.png)
-![deteccion](./resultados/python/frames/frame_009.png)
-![deteccion](./resultados/python/frames/frame_010.png)
-![deteccion](./resultados/python/frames/frame_011.png)
-![deteccion](./resultados/python/frames/frame_012.png)
-![deteccion](./resultados/python/frames/frame_013.png)
-![deteccion](./resultados/python/frames/frame_014.png)
-![deteccion](./resultados/python/frames/frame_015.png)
-![deteccion](./resultados/python/frames/frame_016.png)
-![deteccion](./resultados/python/frames/frame_017.png)
-![deteccion](./resultados/python/frames/frame_018.png)
-![deteccion](./resultados/python/frames/frame_019.png)
-![deteccion](./resultados/unity/escena_exportada.json)
-```
 
 ---
 
