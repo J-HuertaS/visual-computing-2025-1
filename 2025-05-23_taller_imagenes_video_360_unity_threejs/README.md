@@ -1,4 +1,4 @@
-# 🧪 Taller - UV Mapping: Texturas que Encajan
+# 🧪 Taller - Visualización de Imágenes y Video 360° en Unity y Three.js
 
 ## 📅 Fecha
 `2025-05-23` – Fecha de realización
