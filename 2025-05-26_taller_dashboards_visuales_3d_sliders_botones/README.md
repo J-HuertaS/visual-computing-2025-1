@@ -31,8 +31,6 @@ Especifica los entornos usados:
 - React (`react`, `react-dom`)
 - Leva (`leva`) para controles interactivos
 
-📌 Usa las herramientas según la [guía de instalación oficial](./guia_instalacion_entornos_visual.md)
-
 ---
 
 ### 📁 Estructura del Proyecto
