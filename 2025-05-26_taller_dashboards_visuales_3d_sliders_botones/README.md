@@ -115,16 +115,17 @@ const material =
 ```
 ### **Imágenes de texturas**
 - **Blue metal plate**
-<img src="./public/textures/blue_metal_plate_diff_1k.jpg" alt="deteccion" width="350">
+<img src="https://github.com/user-attachments/assets/699ceaa7-6125-411d-a925-236de38fb527" width="250">
+
 - **Metal plate 02**
-<img src="./public/textures/metal_plate_02_diff_1k.jpg" alt="deteccion" width="350">
+<img src="https://github.com/user-attachments/assets/916f1748-f533-4ff3-ac57-6c3bdf8e4902" width="250">
+
 - **Metal plate**
-- <img src="./public/textures/metal_plate_diff_1k.jpg" alt="deteccion" width="350">
+<img src="https://github.com/user-attachments/assets/8c7bdbb3-beb7-4195-aa59-a770941eeea1" width="250">
 ---
 
 ### 📊 Resultados Visuales
-
-### 📌 Este taller **requiere explícitamente un GIF animado**:
+Los resultados obtenidos se pueden ver a continuación: 
 
 - **Panel de control**
 <img src="https://github.com/user-attachments/assets/4ccb3a12-fac3-4880-b247-f893b97a850f" width="650">
@@ -150,7 +151,7 @@ Se realiza la siguiente consulta a la IA Grok:
 
 Este taller nos permite profundizar en el uso de React Three Fiber para crear escenas 3D interactivas que se puedan manejar mediante sliders. Además se puso en práctica el poder integrar materiales PBR con texturas (en  este caso metalicas, que se descargaron en Poly Haven), lo que mejoró significativamente el aspecto visual del toroide. También se reforzó la alicación de transformaciones geométricas y cómo manipular luces dinámicamente para lograr efectos visuales en un fondo oscuro que permite resaltar las iluminaciones.
 
-La parte más interesante fue experimentar con los controles de `leva` para ajustar propiedades en tiempo real, ya que esto hizo la interacción mucho más dinámica y práctica. Sin embargo, lo más complejo fue manejar correctamente las texturas y el entorno HDR, ya que inicialmente tuvimos errores de compilación y problemas de carga de recursos. En futuros proyectos, me gustaría incorporar mapas PBR completos (roughness, metalness, normal) para cada textura y explorar animaciones más avanzadas, como transiciones suaves entre texturas o efectos de luz más elaborados. Los controles más utiles resultan ser el control de color de fondo, las texturas y luces ambientales, aunque en realidad todos son valiosos porque permiten ajustar de forma personalizada la escena, tambi[en como mejora a futuro se podría agregar unos botones donde se pueda cambiar de figura o agregar varias a la vez en la escena.
+La parte más interesante fue experimentar con los controles de `leva` para ajustar propiedades en tiempo real, ya que esto hizo la interacción mucho más dinámica y práctica. Sin embargo, lo más complejo fue manejar correctamente las texturas, ya que inicialmente tuvimos errores de compilación y problemas de carga de recursos. En futuros proyectos, me gustaría incorporar mapas PBR completos (roughness, metalness, normal) para cada textura y explorar animaciones más avanzadas, como transiciones suaves entre texturas o efectos de luz más elaborados. Los controles más utiles resultan ser el control de color de fondo, las texturas y luces ambientales, aunque en realidad todos son valiosos porque permiten ajustar de forma personalizada la escena, tambi[en como mejora a futuro se podría agregar unos botones donde se pueda cambiar de figura o agregar varias a la vez en la escena.
 
 ---
 
