@@ -6,7 +6,7 @@
 ---
 ### 🎯 Objetivo del Taller
 
-El objetivo de este taller es construir un dashboard visual 3D interactivo utilizando React y Three.js (a través de `@react-three/fiber`). La aplicación permite controlar un toro 3D mediante sliders y botones, ajustando propiedades como escala, color, textura, rotación y parámetros de iluminación (intensidad, color y posición de luces puntuales y direccionales). Se implementa un fondo oscuro para resaltar los efectos de luz y se cargan texturas metálicas para mejorar el realismo visual.
+El objetivo de este taller es construir un dashboard visual 3D interactivo utilizando React y Three.js (a través de `@react-three/fiber`). La aplicación permite controlar un toroide 3D mediante sliders y botones, ajustando propiedades como escala, color, textura, rotación y parámetros de iluminación (intensidad, color y posición de luces puntuales y direccionales). Se implementa un fondo oscuro para resaltar los efectos de luz y se cargan texturas metálicas para mejorar el realismo visual.
 
 ---
 
@@ -122,7 +122,7 @@ const material =
 
 - **Metal plate**
 <img src="https://github.com/user-attachments/assets/8c7bdbb3-beb7-4195-aa59-a770941eeea1" width="250">
----
+
 
 ### 📊 Resultados Visuales
 Los resultados obtenidos se pueden ver a continuación: 
@@ -132,8 +132,6 @@ Los resultados obtenidos se pueden ver a continuación:
 
 - **Efectos**
 <img src="https://github.com/user-attachments/assets/9654dfef-db6b-4459-9ae6-9fb21f596d52" width="650">
-
-
 
 ---
 
