@@ -22,7 +22,7 @@ Construir un mundo 3D tipo Minecraft usando Three.js, con bloques y otras formas
   
 https://github.com/user-attachments/assets/6b2303c7-b8ef-4c9e-b4c9-c15c165c48f6
 
-- **Funciones Usadas a destacar**
+## **Funciones Usadas a destacar**
 
 - **`useFrame`**:
   Utilizado para animaciones en tiempo real, como en `AnimatedCloud`, donde se actualizan posiciones de nubes basadas en el tiempo:
@@ -72,7 +72,7 @@ El mundo recrea los jardines de Versalles con una estructura modular usando Reac
 
 ## Ejemplo de material PBR
 
-**Agua en la fuente central**
+### **Agua en la fuente central**
 
 1. En `CentralFountainPBR`, el agua usa un material PBR para realismo:
 ```tsx
@@ -94,7 +94,7 @@ const waterMaterial = useMemo(() => {
   - `metalness: 0.02`: Baja metalicidad para un look no metálico.
   - `envMapIntensity: 1.5`: Intensifica reflejos ambientales.
  
-**Césped en GardenBoundaries**
+### **Césped en GardenBoundaries**
 
 2. El césped utiliza un material PBR con una textura cargada desde un modelo externo:
 ```tsx
