@@ -133,8 +133,6 @@ grassTexture.repeat.set(60, 60);
 ## **Panorama Japonés - Juan Esteban Cardenas**
 
 - **Captura del mundo creado**
-  
-https://github.com/user-attachments/assets/b669a9ae-8d75-4d21-b00f-9f26285ed2e1
 
 ## **Funciones Usadas a destacar**
 
