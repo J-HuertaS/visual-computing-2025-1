@@ -460,3 +460,127 @@ Todo esto fue posible porque el diseño separa la lógica de escena (SceneInit) 
 - Combinables para estructuras más complejas (como en árboles o casas).
 - Fáciles de manipular en cuanto a tamaño, rotación y posición.
 
+
+---
+
+## **Bosque Magico - Gabriela Guzman**
+
+
+
+https://github.com/user-attachments/assets/5108e50e-0f48-47d3-a7b9-e7c9f4d3a73b
+
+
+
+## **Funciones Usadas a destacar**
+
+- **`useFrame`**:
+  Utilizado para animaciones dinámicas en tiempo real, como en `MagicalTree`, donde las hojas rotan y oscilan verticalmente:
+  ```tsx
+  useFrame((state) => {
+    if (leavesRef.current) {
+      leavesRef.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.5) * 0.1;
+      leavesRef.current.position.y = 8 + Math.sin(state.clock.elapsedTime * 0.8) * 0.2;
+    }
+  });
+  ```
+
+- **`useLoader`**:
+  Carga texturas para el terreno en `VoxelTerrain`, aplicando una textura rocosa:
+  ```tsx
+  const dirtTexture = useLoader(THREE.TextureLoader, "/textures/rocky_terrain_diff_1k.jpg");
+  dirtTexture.wrapS = THREE.RepeatWrapping;
+  dirtTexture.wrapT = THREE.RepeatWrapping;
+  dirtTexture.repeat.set(0.5, 0.5);
+  ```
+
+- **`useMemo`**:
+  Optimiza la generación de datos, como las posiciones de los árboles en `MagicalTrees`, evitando cálculos redundantes:
+  ```tsx
+  const treePositions = useMemo(() => {
+    const positions = [];
+    for (let i = 0; i < 15; i++) {
+      positions.push({
+        x: (Math.random() - 0.5) * 60,
+        z: (Math.random() - 0.5) * 60,
+        scale: 0.8 + Math.random() * 0.4,
+        color: Math.random() > 0.5 ? "#e91e63" : "#9c27b0",
+      });
+    }
+    return positions;
+  }, []);
+  ```
+
+## **Organización del mundo y elementos**
+
+El mundo recrea un bosque mágico con una estructura modular usando **React Three Fiber** y **Three.js**:
+- **Canvas**: Contenedor principal con cámara (posición `[0, 25, 40]`, `fov: 60`), controles de órbita (`OrbitControls`) y un entorno predefinido (`Environment` con preset `forest`).
+- **Scene**: Agrupa componentes como `Lighting`, `VoxelTerrain`, `MagicalTrees`, `ColorfulFlowers`, `MagicalCats`, `CrystalFormations`, `MagicalWater`, `FloatingOrbs`, `Mushrooms` y `Butterflies`.
+- **Elementos**:
+  - **Terreno**: Terreno voxelado con textura rocosa y colores según altura (tierra, césped).
+  - **Vegetación**: Árboles mágicos con hojas emisivas, flores coloridas animadas, hongos con puntos brillantes.
+  - **Criaturas**: Gatos mágicos con ojos y colas animadas, mariposas con alas que aletean.
+  - **Estructuras mágicas**: Cristales flotantes, lago central con chorros de agua, orbes flotantes.
+  - **Iluminación**: Luces direccionales, ambientales y puntuales para un ambiente mágico.
+
+## **Ejemplo de material PBR**
+
+### **Terreno en VoxelTerrain**
+
+1. El terreno utiliza una textura rocosa combinada con colores dinámicos para simular césped y tierra:
+```tsx
+const dirtTexture = useLoader(THREE.TextureLoader, "/textures/rocky_terrain_diff_1k.jpg");
+dirtTexture.wrapS = THREE.RepeatWrapping;
+dirtTexture.wrapT = THREE.RepeatWrapping;
+dirtTexture.repeat.set(0.5, 0.5);
+
+<meshStandardMaterial
+  map={block.texture}
+  color={block.color}
+  roughness={0.8}
+  metalness={0.1}
+/>
+```
+- **Propiedades**:
+  - `map: block.texture`: Aplica la textura rocosa cargada desde `/textures/rocky_terrain_diff_1k.jpg`.
+  - `color`: Varía según la altura (`#dbbcaf` para tierra, `#4caf50` o `#81c784` para césped).
+  - `roughness: 0.8`: Superficie rugosa para un aspecto natural.
+  - `metalness: 0.1`: Baja metalicidad para un look orgánico.
+  - La textura se repite (`repeat.set(0.5, 0.5)`) para cubrir los bloques del terreno.
+
+### **Cristales en CrystalFormations**
+
+2. Los cristales usan un material PBR con transparencia y emisión para un efecto mágico:
+```tsx
+<meshStandardMaterial
+  color={color}
+  roughness={0.1}
+  metalness={0.9}
+  emissive={color}
+  emissiveIntensity={0.3}
+  transparent
+  opacity={0.8}
+/>
+```
+- **Propiedades**:
+  - `color`: Color HSL aleatorio en tonos cian a verde.
+  - `roughness: 0.1`: Superficie lisa para reflejos brillantes.
+  - `metalness: 0.9`: Alta metalicidad para un aspecto cristalino.
+  - `emissive` y `emissiveIntensity: 0.3`: Emisión ligera para un brillo mágico.
+  - `transparent: true`, `opacity: 0.8`: Translucidez para un efecto etéreo.
+
+## **Reflexión sobre personalización y formas primitivas**
+
+- **Personalización**:
+  - Los componentes modulares (`MagicalTree`, `ColorfulFlower`, `MagicalCat`, etc.) permiten ajustar posiciones, escalas y colores aleatorios (usando HSL) para variedad visual.
+  - La textura del terreno y los materiales PBR (con `roughness`, `metalness`, `emissive`) crean un estilo mágico ajustable.
+  - Las animaciones sinusoidales (en `useFrame`) añaden dinamismo a elementos como flores, gatos, cristales, agua, orbes, hongos y mariposas.
+  - Los controles de órbita permiten explorar el mundo interactivamente, con límites para mantener la experiencia enfocada.
+
+- **Formas primitivas**:
+  - Se utilizan geometrías básicas (`boxGeometry`, `cylinderGeometry`, `sphereGeometry`, `coneGeometry`) para construir elementos complejos (árboles, gatos, flores, cristales, etc.).
+  - Transformaciones (rotaciones, escalas, posiciones) crean detalles como pétalos de flores, alas de mariposas o cristales en árboles, optimizando rendimiento al evitar modelos 3D pesados.
+  - Ejemplo: En `ColorfulFlower`, los pétalos se crean con cajas posicionadas circularmente:
+    ```tsx
+    <boxGeometry args={[0.1, 0.6, 0.05]} />
+    ```
+
