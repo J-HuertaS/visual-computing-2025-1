@@ -134,6 +134,8 @@ grassTexture.repeat.set(60, 60);
 
 - **Captura del mundo creado**
 
+![taller_threejs_mundo_voxel_jucardenash](https://github.com/user-attachments/assets/3fa79160-2766-4232-a8c2-b6941f3c69a0)
+
 ## **Funciones Usadas a destacar**
 
 - **`useFrame`**:
