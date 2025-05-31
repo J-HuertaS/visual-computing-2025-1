@@ -10,7 +10,7 @@ Construir un mundo 3D tipo Minecraft usando Three.js, con bloques y otras formas
 - **Modelado Procedural:** creación de terreno y objetos con código.
 - **Mapeo UV y Materiales PBR:** aplicar texturas físicas (albedo, normal, rugosidad).
 - **Shaders Simples:** realce de efectos visuales y texturizado.
-- **Luces:*+ iluminación básica para ambientar la escena.
+- **Luces:** iluminación básica para ambientar la escena.
 - **Síntesis Visual:** diseño inmersivo con elementos naturales y criaturas simples.
 
 # **Mundos**
@@ -323,3 +323,138 @@ Tu implementación utiliza **materiales PBR (Physically Based Rendering)** tanto
   -   Esto demuestra la **eficiencia en rendimiento** al evitar la carga de modelos 3D complejos, manteniendo la escena ligera y fácil de renderizar.
   -   Por ejemplo, los **gatos** son creados con esferas (cuerpo, cabeza), conos (orejas) y cilindros/torus (patas, cola), combinados y posicionados para formar una criatura reconocible. Las **flores de cerezo** son pequeñas esferas, mientras que las **linternas** usan cilindros y esferas. Esta aproximación resalta la versatilidad de las formas primitivas en la creación de mundos detallados y estilizados.
   ---
+
+## **Mundo Minimalista - Juan David Ardila Diaz**
+
+- **Captura del mundo creado**
+  
+![deteccion](./mundo_minimalista.gif)
+
+## Funciones Usadas a destacar
+
+- `useEffect`: Ejecuta lógica después de que el componente se monta, ideal para agregar y limpiar objetos de la escena.
+
+```js
+useEffect(() => {
+  // Agrega objeto a la escena
+  return () => {
+    // Limpieza del objeto
+  };
+
+}, [dependencias]);
+```
+
+- `useRef`: Referencia a objetos persistentes como Meshes, permitiendo modificarlos o eliminarlos después.
+
+```js
+const lakeMeshRef = useRef();
+lakeMeshRef.current = lakeMesh;
+```
+
+- `setState`: Controla el estado de React, en este caso sceneReady para montar elementos solo cuando la escena esté lista.
+
+```js
+const [sceneReady, setSceneReady] = useState(false);
+setSceneReady(true);
+```
+
+- `new THREE.Mesh(...)`: Crea un objeto renderizable combinando geometría y material.
+
+```js
+const mesh = new THREE.Mesh(geometry, material);
+```
+
+- `scene.add(...)`: Agrega cualquier objeto 3D a la escena.
+
+```js
+scene.add(mesh);
+```
+
+- `scene.remove(...)`: Elimina objetos de la escena, importante para evitar memoria innecesaria.
+
+```js
+scene.remove(mesh);
+```
+
+- `geometry.dispose()` y `material.dispose()`: Libera la memoria cuando ya no se necesita una geometría o material.
+
+```js
+mesh.geometry.dispose();
+mesh.material.dispose();
+```
+
+## **Organización del mundo y elementos**
+ 
+`SceneInit`: Es una clase personalizada que centraliza toda la configuración inicial de la escena. Se encarga de:
+- Crear la cámara, escena y renderizador.
+- Agregar luces (ambiental, direccional y spotlight).
+- Configurar sombras.
+- Manejar controles de órbita (OrbitControls).
+- Ajustar el renderizador al tamaño de la ventana.
+- Iniciar la animación y renderizado con animate().
+- Todo esto permite tener una escena 3D lista para renderizar objetos.
+
+`Canvas`: Es el elemento HTML <canvas id="myThreeJsCanvas" /> sobre el cual Three.js renderiza la escena 3D. Es el punto de salida visual.
+
+`Scene`: Es el contenedor principal donde se agregan todos los objetos 3D. Se instancia dentro de SceneInit y se pasa como prop a los componentes React que crean geometrías.
+
+`Elementos`
+- `Terreno`: Plano con texturas PBR aplicadas, actúa como base del mundo.
+- `Lago`: Círculo semitransparente azul, representa el agua.
+- `Piedra`: Esferas grises colocadas en distintas posiciones.
+- `Arbol`: Se mencionan distintos árboles con tipos "normal" y "pino" (no se muestra su código aquí).
+- `Casa`: Elemento central del mundo (no se mostró su código).
+- `Fruta`: Objeto con forma y color distintos (no se mostró su código).
+- `Animal`: Elemento animado o decorativo del mundo (no se mostró su código).
+- `DirectionalLight`: Luz blanca como el sol, que proyecta sombras.
+- `AmbientLight`: Luz general de baja intensidad.
+- `AxesHelper`: Ayuda visual para orientación (ejes X, Y, Z).
+
+## **Ejemplo de material PBR**
+Caso en que se usa: Terreno
+Se utiliza THREE.MeshStandardMaterial, que permite texturas físicas realistas como color, rugosidad, desplazamiento, oclusión ambiental y normales.
+
+```js
+const planeMaterial = new THREE.MeshStandardMaterial({
+  color: 0x00ff00,
+  metalness: 0,
+  roughness: 1,
+  displacementScale: 5,
+  displacementBias: 0,
+  aoMapIntensity: 1,
+});
+```
+
+Además, se le aplican texturas cargadas con THREE.TextureLoader, con parámetros para repetición y codificación de color.
+
+```js
+loadAndApplyTexture(colorTexturePath, "map", planeMaterial, true, false);
+loadAndApplyTexture(roughnessTexturePath, "roughnessMap", planeMaterial);
+loadAndApplyTexture(displacementTexturePath, "displacementMap", planeMaterial);
+loadAndApplyTexture(aoTexturePath, "aoMap", planeMaterial);
+loadAndApplyTexture(normalTexturePath, "normalMap", planeMaterial, false, true);
+```
+
+## **Reflexión sobre personalización y formas primitivas**
+### Personalización
+
+- Texturas PBR en el terreno para dar realismo al suelo.
+- Color y transparencia en el lago para simular agua.
+- Sombras activadas para mejorar la percepción de profundidad y realismo.
+- Posiciones precisas de los elementos como piedras, árboles y lago.
+- Animación continua con animate() en SceneInit.
+
+Todo esto fue posible porque el diseño separa la lógica de escena (SceneInit) de los objetos individuales (componentes React), facilitando la reutilización y extensión.
+
+### Formas primitivas usadas
+- PlaneGeometry: Usada en el Terreno. Permite aplicar texturas fácilmente y desplazar la superficie.
+- CircleGeometry: Usada en el Lago. Sencilla y eficaz para representar cuerpos de agua.
+- SphereGeometry: Usada en Piedra. Ideal para simular rocas sin detalles excesivos.
+- AxesHelper: Ayuda visual, aunque no es una forma como tal.
+
+### Beneficios:
+- Permiten crear prototipos rápidos.
+- Bajo costo computacional.
+- Combinables para estructuras más complejas (como en árboles o casas).
+- Fáciles de manipular en cuanto a tamaño, rotación y posición.
+
