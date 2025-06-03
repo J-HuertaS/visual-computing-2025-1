@@ -56,7 +56,7 @@ Explica el proceso:
 2. **Aplicación del modelo YOLOv8**:
    - Cargué el modelo preentrenado con `YOLO('yolov8n.pt')` utilizando la librería `ultralytics`.
    - Se configura un bucle para capturar video en tiempo real con `cv2.VideoCapture(0)`.
-   - Se implementa la detección de objetos en cada frame con `model.predict()`, filtrando clases específicas como "person","cell phone", "bottle" y "cup".
+   - Se implementa la detección de objetos en cada frame con `model.predict()`, filtrando clases específicas como "person","cell phone", "bottle".
 
 3. **Visualización e interacción**:
    - Dibujé rectángulos y etiquetas en azul alrededor de los objetos detectados usando `cv2.rectangle` y `cv2.putText`.
@@ -101,12 +101,9 @@ for result in results:
 
 ## 📊 Resultados Visuales
 
-- Se captura la detección de personas, botellas, bolígrafos y vasos en tiempo real.
+- Se captura la detección de personas, botellas, celulares en tiempo real.
 
-
-```markdown
 ![deteccion](./resultados/deteccion.gif)
-```
 
 ---
 
