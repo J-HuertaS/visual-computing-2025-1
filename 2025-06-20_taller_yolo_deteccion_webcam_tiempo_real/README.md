@@ -56,7 +56,7 @@ Explica el proceso:
 2. **Aplicación del modelo YOLOv8**:
    - Cargué el modelo preentrenado con `YOLO('yolov8n.pt')` utilizando la librería `ultralytics`.
    - Se configura un bucle para capturar video en tiempo real con `cv2.VideoCapture(0)`.
-   - Se implementa la detección de objetos en cada frame con `model.predict()`, filtrando clases específicas como "person","cell phone", "bottle", "pen", y "cup".
+   - Se implementa la detección de objetos en cada frame con `model.predict()`, filtrando clases específicas como "person","cell phone", "bottle" y "cup".
 
 3. **Visualización e interacción**:
    - Dibujé rectángulos y etiquetas en azul alrededor de los objetos detectados usando `cv2.rectangle` y `cv2.putText`.
@@ -79,7 +79,7 @@ if not cap.isOpened():
     exit()
 
 # Clases específicas a detectar 
-target_classes = ["person", "bottle", "pen", "cup", "cell phone","book"]
+target_classes = ["person", "bottle","cup", "cell phone"]
 ```
 
 ```python
