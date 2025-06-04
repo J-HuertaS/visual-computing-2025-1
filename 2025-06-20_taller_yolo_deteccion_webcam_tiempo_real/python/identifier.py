@@ -19,7 +19,7 @@ if not cap.isOpened():
     exit()
 
 # Clases específicas a detectar
-target_classes = ["person","cell phone", "bottle", "pen", "cup"]
+target_classes = ["person","cell phone", "bottle"]
 
 while True:
     ret, frame = cap.read()
