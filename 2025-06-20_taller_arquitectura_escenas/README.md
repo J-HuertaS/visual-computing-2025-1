@@ -142,8 +142,7 @@ function App() {
 export default App;
 ```
 ## 📊 **Resultados Visuales**
-
-<image-card alt="Navegación " src="./resultados/navegacion.gif" ></image-card>
+![deteccion](./resultados/navegacion.gif)
 
 ### Justificación del Flujo y Diseño Modular
 
