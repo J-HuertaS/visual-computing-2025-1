@@ -28,3 +28,17 @@ Aquí encontrarán el código, la documentación, los resultados y las reflexion
 * Documentar de manera clara y concisa el proceso y los resultados de cada actividad.
 
 ---
+
+## 📁 Estructura del Repositorio
+
+El repositorio está organizado en diferentes carpetas que corresponden a los talleres y actividades realizadas:
+
+* `TallerPractico1_Calibracion/`: Taller práctico sobre calibración de cámaras
+* `TallerPractico2_Optica/`: Taller práctico sobre óptica y visión
+* `TallerPractico3_MundoVirtual/`: Taller práctico sobre mundos virtuales
+* `2025-04-28_taller_analisis_figuras_geometricas/`: Taller sobre análisis de figuras geométricas
+* Y más talleres organizados por fecha...
+
+Cada taller contiene su propio README con instrucciones específicas y documentación.
+
+---
