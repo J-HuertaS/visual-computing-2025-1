@@ -28,7 +28,6 @@ public class InterpoladorMovimiento : MonoBehaviour
             transform.position = Vector3.Lerp(puntoInicio.position, puntoFinal.position, t);
         }
 
-        // Interpolación de rotación con SLERP
         Quaternion rotInicial = Quaternion.LookRotation(Vector3.right);
         Quaternion rotFinal = Quaternion.LookRotation(Vector3.left);
         transform.rotation = Quaternion.Slerp(rotInicial, rotFinal, t);

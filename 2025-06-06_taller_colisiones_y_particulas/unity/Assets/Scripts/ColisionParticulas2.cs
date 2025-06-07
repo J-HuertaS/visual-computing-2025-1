@@ -14,5 +14,4 @@ public class ColisionParticulas2 : MonoBehaviour
             if (sonido != null) sonido.Play();
         }
     }
-
 }
