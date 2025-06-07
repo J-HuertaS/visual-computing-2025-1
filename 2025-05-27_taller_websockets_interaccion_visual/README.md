@@ -1,4 +1,4 @@
-# 🧪 Taller - Dashboards Visuales 3D: Sliders y Botones para Controlar Escenas
+# 🧪 Taller - WebSockets e Interacción Visual en Tiempo Real
 
 ## 📅 Fecha
 
