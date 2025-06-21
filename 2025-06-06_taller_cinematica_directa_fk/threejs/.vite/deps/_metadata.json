@@ -1,0 +1,52 @@
+{
+  "hash": "f15d7542",
+  "configHash": "8da63e87",
+  "lockfileHash": "b2309de1",
+  "browserHash": "387ddf7f",
+  "optimized": {
+    "@react-three/fiber": {
+      "src": "../../node_modules/@react-three/fiber/dist/react-three-fiber.esm.js",
+      "file": "@react-three_fiber.js",
+      "fileHash": "c35e736f",
+      "needsInterop": false
+    },
+    "leva": {
+      "src": "../../node_modules/leva/dist/leva.esm.js",
+      "file": "leva.js",
+      "fileHash": "d2095944",
+      "needsInterop": false
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "329a4ea0",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "502afbda",
+      "needsInterop": true
+    },
+    "three": {
+      "src": "../../node_modules/three/build/three.module.js",
+      "file": "three.js",
+      "fileHash": "450979bd",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-QFKXE2ZG": {
+      "file": "chunk-QFKXE2ZG.js"
+    },
+    "chunk-TVFQMRVC": {
+      "file": "chunk-TVFQMRVC.js"
+    },
+    "chunk-FGFER3CE": {
+      "file": "chunk-FGFER3CE.js"
+    },
+    "chunk-G3PMV62Z": {
+      "file": "chunk-G3PMV62Z.js"
+    }
+  }
+}
