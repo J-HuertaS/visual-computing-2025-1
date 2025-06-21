@@ -11,21 +11,21 @@ Conectar la cámara web del PC y procesar el video en tiempo real usando Python,
 ---
 ## 🧠 Conceptos Aprendidos
 
--[x] Captura de video en tiempo real con cv2.VideoCapture.
+- [x] Captura de video en tiempo real con cv2.VideoCapture.
 
--[x] Aplicación de filtros clásicos: escala de grises, binarización, bordes.
+- [x] Aplicación de filtros clásicos: escala de grises, binarización, bordes.
 
--[x] Uso de modelos YOLOv8 para detección de objetos.
+- [x] Uso de modelos YOLOv8 para detección de objetos.
 
--[x] Dibujar cajas, etiquetas y confianza sobre el video en vivo.
+- [x] Dibujar cajas, etiquetas y confianza sobre el video en vivo.
 
--[x] Controles con teclado para manipular la visualización.
+- [x] Controles con teclado para manipular la visualización.
 
--[x] Gestión de múltiples ventanas sincronizadas en OpenCV.
+- [x] Gestión de múltiples ventanas sincronizadas en OpenCV.
 
--[x] Grabación condicional de imágenes y clips de video.
+- [x] Grabación condicional de imágenes y clips de video.
 
--[x] Lógica condicional basada en los objetos detectados (conteo y respuesta).
+- [x] Lógica condicional basada en los objetos detectados (conteo y respuesta).
 ---
 
 ## 🔧 Herramientas y Entornos
