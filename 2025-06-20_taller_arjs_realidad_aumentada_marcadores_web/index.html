@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AR.js Básico</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs="sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+        <a-marker preset="hiro">
+            <a-entity
+            gltf-model="url(models/modelo.glb)"
+            scale="8 8 8"
+            position="0 0 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"
+            ></a-entity>
+        </a-marker>
+
+        <a-marker type="pattern" url="markers/mimarcador.patt">
+            <a-entity
+            gltf-model="url(models/modelo2.glb)"
+            scale="8 8 8"
+            position="0 0 0"
+            animation="property: rotation; to: 0 360 0; loop: true; dir: reverse; dur: 7000"
+            ></a-entity>
+        </a-marker>
+
+        <a-entity camera></a-entity>
+        <audio id="markerSound" src="sound.mp3" preload="auto"></audio>
+    </a-scene>
+    <script src="app.js"></script>
+  </body>
+</html>
