@@ -18,19 +18,19 @@ El reconocimiento de acciones humanas consiste en analizar la postura corporal e
 
 Este taller me permitió aplicar y consolidar varios conceptos clave de visión por computadora y lógica de comportamiento:
 
--[x] MediaPipe Pose: para detectar en tiempo real 33 puntos clave del cuerpo humano (muñecas, caderas, rodillas, tobillos, etc.) a partir de una imagen de video.
+- [x] MediaPipe Pose: para detectar en tiempo real 33 puntos clave del cuerpo humano (muñecas, caderas, rodillas, tobillos, etc.) a partir de una imagen de video.
 
--[x] Landmarks y coordenadas relativas: el sistema representa cada punto como una coordenada normalizada (x, y, z) y se transforma en coordenadas absolutas del frame para su análisis.
+- [x] Landmarks y coordenadas relativas: el sistema representa cada punto como una coordenada normalizada (x, y, z) y se transforma en coordenadas absolutas del frame para su análisis.
 
--[x] Condiciones lógicas basadas en anatomía: como muñecas < nariz para brazos arriba, o caderas > rodillas para determinar si la persona está sentada.
+- [x] Condiciones lógicas basadas en anatomía: como muñecas < nariz para brazos arriba, o caderas > rodillas para determinar si la persona está sentada.
 
--[x] Reconocimiento temporal de movimiento: especialmente en la acción de caminar, que requiere analizar el cambio de posición alternante de los tobillos a lo largo del tiempo.
+- [x] Reconocimiento temporal de movimiento: especialmente en la acción de caminar, que requiere analizar el cambio de posición alternante de los tobillos a lo largo del tiempo.
 
--[x] Retroalimentación multimodal: al incluir tanto una señal visual (texto en pantalla) como una respuesta sonora con pygame, se logró una experiencia más interactiva y clara para el usuario.
+- [x] Retroalimentación multimodal: al incluir tanto una señal visual (texto en pantalla) como una respuesta sonora con pygame, se logró una experiencia más interactiva y clara para el usuario.
 
--[x] Control de ruido y falsos positivos: se implementaron buffers de persistencia (como el contador de caminata) para evitar cambios erróneos en la detección por movimientos súbitos o casuales.
+- [x] Control de ruido y falsos positivos: se implementaron buffers de persistencia (como el contador de caminata) para evitar cambios erróneos en la detección por movimientos súbitos o casuales.
 
--[x] Procesamiento en tiempo real con OpenCV: para capturar, transformar, analizar y visualizar cada frame sin interrupciones, mostrando tanto la postura como la acción reconocida.
+- [x] Procesamiento en tiempo real con OpenCV: para capturar, transformar, analizar y visualizar cada frame sin interrupciones, mostrando tanto la postura como la acción reconocida.
 
 Este enfoque me permitió entender cómo diseñar un sistema interactivo basado en lenguaje corporal, integrando lógica, visión por computadora y retroalimentación en un flujo continuo.
 
@@ -87,7 +87,7 @@ resultados = pose.process(frame_rgb)
 
 ### 🧠 Reglas para Reconocimiento de Acciones
 
--[x] Levantar brazos
+- [x] Levantar brazos
 
 Se verifica si ambas muñecas (`LEFT_WRIST`, `RIGHT_WRIST`) están por encima de la nariz (`NOSE`) en el eje Y (menor valor en píxeles → más arriba):
 
@@ -98,7 +98,7 @@ if lw_y < nose_y and rw_y < nose_y:
         sound.play()  # feedback sonoro
 ```
 
--[x] Caminando
+- [x] Caminando
 
 La caminata se detecta con una lógica que analiza la alternancia vertical entre los tobillos (`LEFT_ANKLE`, `RIGHT_ANKLE`). Se considera que hay un paso si:
 
@@ -129,7 +129,7 @@ if contador_caminata > 0:
 
 Esto evita falsos positivos y permite que la postura “Caminando” se mantenga unos segundos mientras continúa el movimiento alternante.
 
--[x] Sentado
+- [x] Sentado
 
 Se considera que la persona está sentada si ambas caderas (`LEFT_HIP`, `RIGHT_HIP`) están por debajo de las rodillas (`LEFT_KNEE`, `RIGHT_KNEE`):
 
