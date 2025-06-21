@@ -18,19 +18,19 @@ La inteligencia artificial para NPCs (Non-Playable Characters) permite dotar a l
 
 Este taller me permitió explorar varios componentes clave de este tipo de IA en Unity:
 
--[x] NavMesh y NavMeshAgent: para navegación autónoma en un entorno con obstáculos, usando una malla de navegación que define zonas transitables.
+- [x] NavMesh y NavMeshAgent: para navegación autónoma en un entorno con obstáculos, usando una malla de navegación que define zonas transitables.
 
--[x] Máquinas de Estados (State Machines): para alternar entre comportamientos como patrullar, perseguir, quedarse quieto o buscar, dependiendo de estímulos del entorno.
+- [x] Máquinas de Estados (State Machines): para alternar entre comportamientos como patrullar, perseguir, quedarse quieto o buscar, dependiendo de estímulos del entorno.
 
--[x] Animator Controller: para vincular los estados lógicos con animaciones, como Idle, Walk, Run y Buscar, usando condiciones basadas en variables como la velocidad.
+- [x] Animator Controller: para vincular los estados lógicos con animaciones, como Idle, Walk, Run y Buscar, usando condiciones basadas en variables como la velocidad.
 
--[x] Detección por Triggers: para permitir que el personaje "note" al jugador usando colliders con IsTrigger.
+- [x] Detección por Triggers: para permitir que el personaje "note" al jugador usando colliders con IsTrigger.
 
--[x] Sincronización entre lógica y animación: aplicando la magnitud de la velocidad del agente de navegación para decidir qué animación mostrar.
+- [x] Sincronización entre lógica y animación: aplicando la magnitud de la velocidad del agente de navegación para decidir qué animación mostrar.
 
--[x] Transiciones reactivas: como correr si el jugador es detectado o detenerse si se está cerca, cambiando el comportamiento y la animación en tiempo real.
+- [x] Transiciones reactivas: como correr si el jugador es detectado o detenerse si se está cerca, cambiando el comportamiento y la animación en tiempo real.
 
--[x] Estados intermedios personalizados: como el estado de "Buscar", que añade realismo cuando el personaje pierde de vista al jugador.
+- [x] Estados intermedios personalizados: como el estado de "Buscar", que añade realismo cuando el personaje pierde de vista al jugador.
 
 Este enfoque me enseñó a coordinar el movimiento lógico con animaciones visuales, y a implementar un flujo de IA reactiva simple pero funcional en un personaje 3D.
 
