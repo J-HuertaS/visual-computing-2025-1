@@ -43,7 +43,7 @@ Lista de los principales conceptos aplicados en la práctica:
 │   ├── vite.config.js
 │   ├── eslint.config.js
 ├── resultados/            
-│   ├── navegation.gif
+│   ├── navigation.gif
 ├── README.md
 ```
 ## 🧪 Implementación
@@ -142,7 +142,7 @@ Lista de los principales conceptos aplicados en la práctica:
 
 
 ```markdown
-![Navegación inmersiva](./resultados/2navigation.gif)
+![Navegación inmersiva](./resultados/navigation.gif)
 ```
 
 ---
