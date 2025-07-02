@@ -138,7 +138,7 @@ Lista de los principales conceptos aplicados en la práctica:
 
 ## 📊 **Resultados Visuales**
 
-- El GIF generado muestra la navegación inmersiva por la escena 3D.
+- El GIF generado muestra la navegación inmersiva por la escena 3D, el manejo de los controles se puede realizar con el mouse que actuaría como puntero, asimilando con el visor el movimiento de la cabeza para capturar la vista y a su vez se puede interactuar con las flechas del teclado generando el mismo comportamiento inmersivo.
 
 
 <img src="resultados/navigation.gif" alt="Navegación inmersiva" style="width: 1000px; height: auto;">
