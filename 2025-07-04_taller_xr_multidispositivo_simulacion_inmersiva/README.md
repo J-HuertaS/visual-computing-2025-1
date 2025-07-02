@@ -141,9 +141,7 @@ Lista de los principales conceptos aplicados en la práctica:
 - El GIF generado muestra la navegación inmersiva por la escena 3D.
 
 
-```markdown
-![Navegación inmersiva](./resultados/navigation.gif)
-```
+<img src="resultados/navigation.gif" alt="Navegación inmersiva" style="width: 1000px; height: auto;">
 
 ---
 
