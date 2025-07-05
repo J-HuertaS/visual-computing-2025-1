@@ -13,8 +13,6 @@ Diseñar una escena 3D interactiva que se adapte en tiempo real según los datos
 
 ## 🧠 Conceptos Aprendidos
 
-Lista los principales conceptos aplicados:
-
 - [x] Uso de websockets para transmitir datos desde pythom
 - [x] Conexión por websockets a un proyecto Threejs
 - [x] Realización de gráficos en Threejs que se actualizan con datos en tiempo real
