@@ -63,6 +63,8 @@ Explorar las características, capacidades y limitaciones de cinco dispositivos 
 
 #### Alojamiento del Video
 - Se subió el video 360° a YouTube para evitar la instalación de paquetes locales, asegurando accesibilidad mediante streaming por URL en Unity.
+- Video 1: https://youtu.be/Z1e8cggr8t0
+- Video 2: https://youtu.be/Lqz2Y9tQRUE
 
 ### 🔹 Código relevante
 
