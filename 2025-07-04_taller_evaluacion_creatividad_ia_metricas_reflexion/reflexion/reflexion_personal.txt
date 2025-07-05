@@ -1,0 +1,7 @@
+Al trabajar con imágenes generadas por IA, uno se da cuenta de que no todo puede medirse con números. Es cierto que usar CLIPScore o calcular qué tan simétrica es una imagen nos da información útil... pero ¿realmente nos dice si algo es bonito o creativo?
+
+La creatividad no es solo combinar cosas nuevas. Es provocar, emocionar, hacer que alguien se detenga un momento y diga: "wow". Eso no lo puede medir una fórmula. Yo sentí que algunas imágenes generadas eran técnicamente buenas, pero no me transmitían nada. Y otras, aunque tenían errores o rarezas, eran más interesantes visualmente.
+
+Además, aunque la IA genera la imagen, yo fui quien escribió el prompt, eligió los estilos, cambió las semillas... la imagen no fue solo de la máquina. Fue el resultado de un diálogo: yo propongo una idea, la IA responde, y yo decido si eso era lo que buscaba o no. En ese proceso, el humano sigue siendo fundamental.
+
+Me parece importante tener métricas, sí, pero no debemos olvidar que el arte también es subjetivo. Lo que para mí tiene valor, para otra persona quizá no. Por eso creo que la creatividad es difícil (o imposible) de medir del todo con código. Al final, seguimos siendo nosotros quienes le damos sentido a lo que vemos.
