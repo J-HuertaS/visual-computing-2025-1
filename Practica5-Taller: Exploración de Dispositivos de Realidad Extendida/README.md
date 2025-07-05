@@ -132,7 +132,7 @@ Se incluye un GIF para demostrar la reproducción del video 360° en el Meta Que
 
 ![Meta Quest Pro 360° Video](resultados/meta_quest_360_result.gif)
 
-### 📊 Tabla Comparativa de Dispositivos
+### 📊 Tabla Comparativa de Dispositivos - Técnica
 
 | **Dispositivo**         | **Tipo de XR** | **Resolución por Ojo** | **Campo de Visión (FOV)** | **Interacción**                     | **Casos de Uso**                          | **Limitaciones**                          |
 |-------------------------|----------------|------------------------|---------------------------|-------------------------------------|-------------------------------------------|-------------------------------------------|
@@ -143,12 +143,12 @@ Se incluye un GIF para demostrar la reproducción del video 360° en el Meta Que
 | **Meta Quest Pro**      | VR/MR          | 1800x1920              | ~106°                     | Controladores, manos, seguimiento facial | VR social, prototipado AR, juegos          | Calidad de AR passthrough inferior        |
 
 **Observaciones**:
-- **HoloLens 1** es obsoleto pero confiable para tareas MR básicas.
+- **HoloLens 1:** 
 - **HoloLens 2** mejora el FOV y la interacción, pero es costoso.
 - **Magic Leap 1** destaca en mapeo espacial, pero carece de un ecosistema robusto de aplicaciones.
 - **Apple Vision Pro** ofrece visuales superiores y controles intuitivos, pero su costo y duración de batería son limitantes.
-- **Meta Quest Pro** equilibra costo y funcionalidad, con VR sólida y AR passthrough decente, ideal para prototipos.
-
+- **Meta Quest Pro:** Son ligeras y cómodas al no tener otro equipamento extra, procesamiento rápido, la resolución es buena, evidenciado un problema con el mando porque no tenía buen seguimiento, tiene un sistema operativo completo, por ejemplo nosotros descargamos YouTube para desarrollar la práctica.
+- **Meta Quest 3:** Son ligeras y cómodas al no tener otro equipamento extra, procesamiento rápido, la resolución es buena, evidenciado un problema con el mando porque no tenía buen seguimiento, tiene un sistema operativo completo, por ejemplo nosotros descargamos YouTube para desarrollar la práctica. Finalmente, se puede controlar mediante gestos lo cual lo hace más flexible para diferentes casos de uso.
 ---
 
 ## 🧩 Prompts Usados
