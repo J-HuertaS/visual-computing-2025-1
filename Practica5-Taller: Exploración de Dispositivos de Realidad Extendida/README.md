@@ -61,9 +61,16 @@ Practica5-Taller: Exploración de Dispositivos de Realidad Extendida/
 
 ### Evidencia de la practica
 
+<img src="https://github.com/user-attachments/assets/0fafcf49-456d-4182-989d-3ae189cd4708" width="300">
+<img src="https://github.com/user-attachments/assets/d88b2dc7-88f5-4dc5-80a4-08cc3aafe634" width="300">
+<img src="https://github.com/user-attachments/assets/f1ac3459-72ec-400a-a4af-91223d6b8a2b" width="300">
 
 
-### 📊 Tabla Comparativa de Dispositivos - Técnica
+
+
+
+
+### 📊 Tabla  Técnica Comparativa de Dispositivos
 
 | **Dispositivo**         | **Tipo de XR** | **Resolución por Ojo** | **Campo de Visión (FOV)** | **Interacción**                     | **Casos de Uso**                          | **Limitaciones**                          |
 |-------------------------|----------------|------------------------|---------------------------|-------------------------------------|-------------------------------------------|-------------------------------------------|
@@ -85,7 +92,7 @@ Practica5-Taller: Exploración de Dispositivos de Realidad Extendida/
 - **Magic Leap 1:** Son de realidad mixta, entonces se ve a través del cristal y pues el otro cristal que proyecta lo que se está viendo y por eso son menos inmersivas, la imagen digital se ve bien, pero la realidad al verse en lentes oscuros se ve raro, las gafas no quedan tan justas aunque no son tan pesadas, pero se siente que se van hacia atrás por el peso, para controlarlo es por medio de un control (joystick) magnetico y la CPU es separado del display (gafas)
 
   
-- **Apple Vision Pro:** 
+- **Apple Vision Pro:** Tienen la mejor cámara para ver hacía fuera y son las más fluidas, son cómodas, no apretan en ningún lado, el peso se siente un poco enfrente por lo que lo hace un poco desbalanceqdo y los controles se manejan con la mirada, uno mira lo que se que quiere seleccionar, se acompaña con controles de la mano para seleccionar, cuando se tiene cámara completa es bastante inmersivo.
 
   
 - **Meta Quest Pro:** Son ligeras y cómodas al no tener otro equipamento extra, procesamiento rápido, la resolución es buena, evidenciado un problema con el mando porque no tenía buen seguimiento, tiene un sistema operativo completo, por ejemplo nosotros descargamos YouTube para desarrollar la práctica.
