@@ -23,7 +23,6 @@ Implementar un sistema de persistencia de datos usando Firebase para guardar y r
 
 ## 🔧 Herramientas y Entornos
 
-- Unity 3D
 - React + Three.js
 - Firebase Realtime Database
 - Firebase Console
@@ -45,10 +44,10 @@ Implementar un sistema de persistencia de datos usando Firebase para guardar y r
 
 ### 🔹 Etapas realizadas
 
-1. Configuración del proyecto en Firebase: El primer paso para este taller es la creación de un proyecto en Firebase, dentro de este se crean dos aplicaciones, una en Android para Unity y una web para Threejs.
+1. Configuración del proyecto en Firebase: El primer paso para este taller es la creación de un proyecto en Firebase, dentro de este se crea una aplicación web para Threejs.
 2. Configuración de la conexión al proyecto en Firebase: Lo siguiente que se hace es crear un archivo de configuración que se conecta a la aplicación a partir de datos cómo apiKey, authDomain, databaseURL, projectID y storageBucket. 
-3. Creación de la escena: Se crea una escena simple para cada uno de los entornos, en el caso de Threejs tenemos un cubo que rota sobre su eje mientras se desplaza de un lado al otro de la pantalla, y para el caso de Unity tenemos una esfera que se puede arrastrar con el cursor. 
-4. Actualización de datos: Se configura la escena en Threejs para que se pueda guardar la posición del cubo en el plano, de forma que al recargar la escena el cubo aparece en la última posición en la que estaba, de igual forma para la escena en Unity.
+3. Creación de la escena: Se crea una escena simple, en este caso tenemos un cubo que rota sobre su eje mientras se desplaza de un lado al otro de la pantalla.
+4. Actualización de datos: Se configura la escena en Threejs para que se pueda guardar la posición del cubo en el plano, de forma que al recargar la escena el cubo aparece en la última posición en la que estaba.
 
 ---
 
@@ -88,34 +87,6 @@ const firebaseConfig = {
 
     return () => clearInterval(interval);
   }, [initialLoaded]);
-```
-
-```cs
- public void LoadData(string userId, System.Action<TransformData> onLoaded) {
-        reference.Child("users").Child(userId).GetValueAsync().ContinueWithOnMainThread(task => {
-            if (task.IsCompleted) {
-                DataSnapshot snapshot = task.Result;
-                if (snapshot.Exists) {
-                    string json = snapshot.GetRawJsonValue();
-                    TransformData data = JsonUtility.FromJson<TransformData>(json);
-                    onLoaded?.Invoke(data);
-                }
-            }
-        });
-    }
-```
-
-
-```cs
-if (Input.GetKeyDown(KeyCode.L))
-        {
-            firebase.LoadData(userId, data =>
-            {
-                objeto.position = data.GetPosition();
-                objeto.rotation = data.GetRotation();
-                Debug.Log("✅ Posición y rotación cargadas");
-            });
-        }
 ```
 
 ---
